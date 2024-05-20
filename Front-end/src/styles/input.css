@@ -1,0 +1,32 @@
+.inputID{
+    width: 50px;
+    height: 23px;
+}
+
+.inputData{
+    height: 23px;
+    width: 350px;
+}
+
+span{
+    font-size: 17px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+button{
+    margin-top: 23px;
+    margin-left: 15px;
+}
+
+.addButtn{
+    background-color: rgb(81, 243, 81);
+}
+
+.changeButtn{
+    background-color: yellow;
+}
+
+.delButtn{
+    background-color: rgb(251, 56, 56);
+}

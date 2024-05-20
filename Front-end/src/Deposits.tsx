@@ -1,5 +1,9 @@
+import { GetData } from "./GetData";
+import { Inputs } from "./Inputs";
+
 export function Deposits(){
     return(
+        <>
         <table width="50%" align="left">
             <tr>
                 <th>ID</th>
@@ -8,6 +12,9 @@ export function Deposits(){
                 <th>Sum</th>
                 <th>Percentage</th>
             </tr>
+            <GetData tableName="Deposits"/>
         </table>
+        <Inputs id="" data="" tableName="Deposits"/>
+        </>
     )
 }

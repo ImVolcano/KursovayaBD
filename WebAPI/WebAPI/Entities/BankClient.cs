@@ -1,7 +1,7 @@
 ﻿// Данный класс представляет собой клиента банка
 public class BankClient
 {
-    private int ClientID; // Уникальный номер клиента (равен -1, если создан экземпляр класса, записи которого нет в таблице)
+    private int ClientID; // Уникальный номер клиента
     private string Name; // Имя клиента
     private string Surname; // Фамилия клиента
     private string? Patronymic; // Отчество клиента

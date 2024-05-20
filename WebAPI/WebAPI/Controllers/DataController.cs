@@ -127,8 +127,11 @@ namespace WebAPI.Controllers
 
         // Метод для добавление новой записи в таблицу по названию
         [HttpPost]
-        public IActionResult AddData(string data, string tableName)
+        public IActionResult AddData(Params pars)
         {
+            string data = pars.Data;
+            string tableName = pars.TableName;
+
             string expression = "";
 
             switch (tableName)
@@ -193,9 +196,14 @@ namespace WebAPI.Controllers
         }
 
         // Метод для удаления записи по ID в таблице по названию
-        [HttpDelete]
-        public IActionResult Delete(int id, string tableName)
+        [HttpPost]
+        public IActionResult Delete(Params pars)
         {
+            string data = pars.Data;
+            string tableName = pars.TableName;
+
+            int id = Convert.ToInt32(data);
+
             string expression = "";
 
             switch (tableName)
@@ -245,9 +253,14 @@ namespace WebAPI.Controllers
         }
 
         // Метод для изменения данных в записи в таблице по названию
-        [HttpPut]
-        public IActionResult Update(int id, string data, string tableName)
+        [HttpPost]
+        public IActionResult Update(Params pars)
         {
+            string data = pars.Data;
+            string tableName = pars.TableName;
+
+            int id = Convert.ToInt32(data.Split(" ")[0]);
+
             string expression = "";
             string values = "";
 
